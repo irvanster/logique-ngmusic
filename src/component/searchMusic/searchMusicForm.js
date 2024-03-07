@@ -7,7 +7,7 @@ import { useRouter, useSearchParams } from "next/navigation"
 import { useState } from "react"
 
 
-const SearchMusicForm = () => {
+const SearchMusicForm = ({ useGradientButton = true }) => {
     const router = useRouter()
     const searchParams = useSearchParams()
     const getSearchParam = searchParams.get('search')
@@ -56,7 +56,7 @@ const SearchMusicForm = () => {
                     }}
                 />
             </div>
-            <button className="bg-gradient-to-br from-primary-500 to-primary-200 rounded-[20px] w-full md:max-w-[50%] px-5 py-2">
+            <button className={`${useGradientButton ? 'bg-gradient-to-br from-primary-500 to-primary-200' : 'bg-white-opacity'} rounded-[20px] w-full md:max-w-[50%] px-5 py-2`}>
                 <p className="text-center text-white ">Search</p>
             </button>
         </form>

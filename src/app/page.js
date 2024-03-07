@@ -11,7 +11,7 @@ const Home = () => {
           <img src="/logo.webp" alt="ngmusic" />
         </div>
         <Suspense>
-          <SearchMusicForm />
+          <SearchMusicForm useGradientButton={false}/>
         </Suspense>
       </div>
 
